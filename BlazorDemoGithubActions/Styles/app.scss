@@ -1,0 +1,21 @@
+﻿// Order matters here, first we we override bootstrap variables
+@import "bootstrap-overrides";
+@import "bootstrap-color-overrides";
+
+// Then we inject bootstrap
+@import "bootstrap-5.3.3/bootstrap";
+
+// Rest of our custom code starts here
+
+.blazor-progress {
+  height: 20px;
+  width: 80vw
+}
+
+.blazor-progress-bar {
+  width: var(--blazor-load-percentage, 0%);
+}
+
+.loading-progress-text:after {
+  content: var(--blazor-load-percentage-text, "");
+}
